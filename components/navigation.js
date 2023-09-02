@@ -2,6 +2,7 @@ import {
     Avatar,
     Box,
     Center,
+    Divider,
     Drawer,
     DrawerContent,
     DrawerOverlay,
@@ -14,7 +15,12 @@ import {
   } from "@chakra-ui/react";
 
   import {MdSpaceDashboard,MdOutlineMenu,MdOutlineSettings} from 'react-icons/md';
-  import {BiStats} from 'react-icons/bi'
+  import {BiStats} from 'react-icons/bi';
+  import {BiLogOutCircle} from 'react-icons/bi';
+  import {BsFilesAlt} from 'react-icons/bs';
+  import { useRouter } from "next/router";
+
+
   function Navigation_Tab({children,current_page,set_current_page}){
     const sidebar = useDisclosure();
     return(
@@ -73,6 +79,7 @@ import {
             color="inherit"
             h="14"
             gap='2'
+            justify={'space-between'}
           >
             <IconButton
               aria-label="Menu"
@@ -141,6 +148,7 @@ import {
   
   const SidebarContent = (props) => {
   const {current_page,set_current_page}={...props};
+  const router = useRouter();
   return(
     <Box
       as="nav"
@@ -203,7 +211,7 @@ import {
         gap='1'
       >
         <NavItem 
-            bg={current_page == 'dashboard'? '#A9BCD0' : ''}
+            bg={current_page == 'dashboard'? 'purple' : ''}
             color={current_page == 'dashboard'? '#fff' : ''} 
             borderRadius={current_page == 'dashboard'? 'md' : ''} 
             icon={MdSpaceDashboard} 
@@ -212,7 +220,16 @@ import {
             Dashboard
         </NavItem>
         <NavItem 
-            bg={current_page == 'stats'? '#A9BCD0' : ''}
+            bg={current_page == 'summaries'? 'purple' : ''}
+            color={current_page == 'summaries'? '#fff' : ''} 
+            borderRadius={current_page == 'summaries'? 'md' : ''} 
+            icon={BsFilesAlt} 
+            onClick={(()=>{set_current_page("summaries")})}
+        >
+            Summaries
+        </NavItem>
+        <NavItem 
+            bg={current_page == 'stats'? 'purple' : ''}
             color={current_page == 'stats'? '#fff' : ''} 
             borderRadius={current_page == 'stats'? 'md' : ''} 
             icon={BiStats   } 
@@ -221,14 +238,29 @@ import {
             Study stats
         </NavItem>
         <NavItem 
-            bg={current_page == 'settings'? '#A9BCD0' : ''}
+            bg={current_page == 'settings'? 'purple' : ''}
             color={current_page == 'settings'? '#fff' : ''} 
             borderRadius={current_page == 'settings'? 'md' : ''} 
             icon={MdOutlineSettings} 
-            onClick={(()=>{set_current_page("dashboard")})}
+            onClick={(()=>{set_current_page("settings")})}
         >
             Settings
         </NavItem>
+        <Divider/>
+        <HStack
+          m='4'
+          alignItems={'center'}
+          gap='2'
+          bg ='gray.400'
+          p='2'
+          borderRadius={'5'}
+          color='#fff'
+          onClick={(()=>{router.push('/')})}
+          justify={''}
+        >
+          <BiLogOutCircle/>
+          <Text>LogOut</Text>
+        </HStack>
       </Flex>
     </Box>
   )};

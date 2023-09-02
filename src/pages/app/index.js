@@ -11,7 +11,9 @@ import {
 
 //sections
 import Dashboard from './dashboard';
-import Summary from './summary'
+import Summary from './summary';
+import Summaries from './summaries';
+import Settings from './settings';
 //utils
 
 export default function Index() {
@@ -32,6 +34,14 @@ const Body=(props)=>{
   }else if (current_page == 'summary'){
     return (
       <Summary set_current_page={set_current_page}/>
+    )
+  }else if (current_page == 'summaries'){
+    return (
+      <Summaries set_current_page={set_current_page}/>
+    )
+  }else if (current_page == 'settings'){
+    return (
+      <Settings set_current_page={set_current_page}/>
     )
   }else{
     return(

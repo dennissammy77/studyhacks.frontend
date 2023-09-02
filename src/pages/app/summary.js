@@ -2,7 +2,7 @@ import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, HStack, Image, Text } 
 import React from 'react'
 import {BsArrowLeft} from 'react-icons/bs';
 
-export default function Summary({set_current_page}) {
+export default function Summary({set_current_page,data}) {
   return (
     <Box>
         <HStack p='1' borderRadius={'md'} bg='#eee' w='20' px='2' my='2' cursor='pointer' onClick={(()=>{set_current_page('dashboard')})}>
