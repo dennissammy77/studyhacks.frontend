@@ -25,18 +25,18 @@ function Settings({set_current_page}) {
         >
             <Flex gap='4' align='center'>
                 <Flex w='100px' position='relative' cursor='pointer' onClick={(()=>{set_image_edit(!image_edit)})}>
-                        <Avatar w='100px' h='100px' borderRadius='999' src='' name='dennis sammy' alt='profile photo' boxShadow='lg' objectFit='cover'/>
+                        <Avatar w='100px' h='100px' borderRadius='999' src='' name='john doe' alt='profile photo' boxShadow='lg' objectFit='cover'/>
                         <MdEditNotifications style={{fontSize:'20px',padding:'2px',position:'absolute',bottom:"15px",right:'-5px',backgroundColor:"purple",borderRadius:'20px',color:'#fff'}}/>
                     </Flex>
                 <Flex direction='column' gap='1' ml='2'>
-                    <Text fontWeight={'bold'}>Dennis Sammy</Text>
-                    <Text fontSize={'10px'} color='grey'>dennissammy77@gmail.com</Text>
+                    <Text fontWeight={'bold'}>John Doe</Text>
+                    <Text fontSize={'10px'} color='grey'>johndoe@gmail.com</Text>
                 </Flex>
             </Flex>
             <Flex direction='column' gap='4'>
                 <Flex direction='column'>
                     <Text fontWeight='bold' color='grey'>Username</Text>
-                    <Input size='md' type='text' placeholder='dennissammy' variant='filled'/>
+                    <Input size='md' type='text' placeholder='johndoe' variant='filled'/>
                 </Flex>
                 <Flex gap='2' w='100%'>
                     <Flex flex='1' direction='column'>
@@ -45,7 +45,7 @@ function Settings({set_current_page}) {
                     </Flex>
                     <Flex flex='1' direction='column'>
                         <Text fontWeight='bold' color='grey'>email</Text>
-                        <Input size='md' type='email' placeholder='dennissammy77@gmail.com' variant='filled'/>
+                        <Input size='md' type='email' placeholder='johndoe@gmail.com' variant='filled'/>
                     </Flex>
                 </Flex>
             </Flex>

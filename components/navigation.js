@@ -93,7 +93,7 @@ import {
             />
             <Avatar
               size={"sm"}
-              name='dennis sammy'
+              name='john doe'
               src=''
             />
           </Flex>
@@ -178,7 +178,7 @@ import {
         gap='2'
       >
         <Avatar
-            name='dennis sammy'
+            name='john doe'
             borderRadius={'5'}
             size='lg'
         />
@@ -190,7 +190,7 @@ import {
                 fontSize={'md'}
                 fontWeight={'semibold'}
             >
-                Dennis Sammy
+                John Doe
             </Text>
             <Text 
                 fontSize={'10px'}
@@ -198,7 +198,7 @@ import {
                 overflow={'clip'}
                 w='full'
             >
-                dennissammy77@gmail.com
+                johndoe@gmail.com
             </Text>
         </Box>
       </HStack>

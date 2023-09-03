@@ -155,9 +155,9 @@ export default function Dashboard({set_current_page}) {
                     </TabPanel>
                     <TabPanel>
                         <InputGroup size='sm'>
-                            <InputLeftAddon children='https://' />
+                            <InputLeftAddon />
                             <Input placeholder='paste article link' />
-                            <InputRightAddon children='.com' />
+                            <InputRightAddon />
                         </InputGroup>
                     </TabPanel>
                     <TabPanel>
